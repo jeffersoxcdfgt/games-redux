@@ -1,0 +1,402 @@
+<div class="page-header">
+	<ol class="breadcrumb pgui-breadcrumb">
+		<li>
+			<a href="#"><i class="icon-home"></i></a>
+		</li>
+		<li class="dropdown">
+			<a href="#">Games</a>
+		</li>
+		<li class="dropdown">Games <button class="btn btn-xs btn-default dropdown-toggle pgui-breadcrumb-siblings"  data-toggle="dropdown">
+			<span class="caret"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li>
+					<a href="#">Separate Page</a>
+				</li>
+				<li>
+					<a href="#">Modal Window</a>
+				</li>
+				<li>
+					<a href="#">Inline Editing</a>
+				</li>
+				<li>
+					<a href="#">Custom Separate Page</a>
+				</li>
+				<li>
+					<a href="#">Custom Modal Dialog</a>
+				</li>
+				<li>
+					<a href="#">Custom Inline Form</a>
+				</li>
+				<li>
+					<a href="#">Wizard Form</a>
+				</li>
+				<li>
+					<a href="#">Adding multiple records</a>
+				</li>
+				<li>
+					<a href="#">Form Layouts</a>
+				</li>
+				<li>
+					<a href="#">Editors Overview</a>
+				</li>
+				<li>
+					<a href="#">Validation</a>
+				</li>
+				<li>
+					<a href="#">Client-side API</a>
+				</li>
+				<li>
+					<a href="#">Dependent Lookups</a>
+				</li>
+				<li>
+					<a href="#">On-the-Fly Adding</a>
+				</li>
+				<li>
+					<a href="#">Quick Edit</a>
+				</li>
+				<li>
+					<a href="#">Custom Default Values</a>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<h1>Games</h1>
+</div>
+<div class="modal modal-top fade js-page-settings-dialog" data-record-count-per-page="0" data-total-record-count="0" id="page-settings" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+				<h3 class="modal-title">Ajustes de página</h3>
+			</div>
+			<div class="modal-body">
+				<h4>Apariencia</h4>
+				<table class="table table-bordered table-condensed form-inline">
+					<tr>
+						<td class="page-settings-label-container"><label for="page-settings-viewmode-control">Modo de vista</label></td>
+						<td class="page-settings-control-container" colspan="2"><select class="form-control js-page-settings-viewmode-control" id="page-settings-viewmode-control">
+							<option data-name="TableViewMode" selected="selected" value="0">
+								Tabla
+							</option>
+							<option data-name="CardViewMode" value="1">
+								Tarjetas
+							</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td class="page-settings-label-container" rowspan="5">
+							<label>Cantidad de tarjetas por fila</label>
+							<p>Aquí puede seleccionar la cantidad de tarjetas mostradas en una fila para cada resolución de pantalla. La resolución actual está resaltada <strong class="text-success">de esta manera</strong>.</p>
+						</td>
+					</tr>
+					<tr class="page-settings-hightlight-lg">
+						<td style="width: 25%;"><label for="page-settings-card-column-count-lg">Pantalla grande</label></td>
+						<td class="page-settings-control-container"><select class="form-control js-page-settings-card-column-count" data-size="lg" id="page-settings-card-column-count-lg">
+							<option value="1">
+								1
+							</option>
+							<option value="2">
+								2
+							</option>
+							<option selected="selected" value="3">
+								3
+							</option>
+							<option value="4">
+								4
+							</option>
+							<option value="6">
+								6
+							</option>
+						</select></td>
+					</tr>
+					<tr class="page-settings-hightlight-md">
+						<td style="width: 25%;"><label for="page-settings-card-column-count-md">Pantalla</label></td>
+						<td class="page-settings-control-container"><select class="form-control js-page-settings-card-column-count" data-size="md" id="page-settings-card-column-count-md">
+							<option value="1">
+								1
+							</option>
+							<option value="2">
+								2
+							</option>
+							<option selected="selected" value="3">
+								3
+							</option>
+							<option value="4">
+								4
+							</option>
+							<option value="6">
+								6
+							</option>
+						</select></td>
+					</tr>
+					<tr class="page-settings-hightlight-sm">
+						<td style="width: 25%;"><label for="page-settings-card-column-count-sm">Tableta</label></td>
+						<td class="page-settings-control-container"><select class="form-control js-page-settings-card-column-count" data-size="sm" id="page-settings-card-column-count-sm">
+							<option value="1">
+								1
+							</option>
+							<option selected="selected" value="2">
+								2
+							</option>
+							<option value="3">
+								3
+							</option>
+							<option value="4">
+								4
+							</option>
+							<option value="6">
+								6
+							</option>
+						</select></td>
+					</tr>
+					<tr class="page-settings-hightlight-xs">
+						<td style="width: 25%;"><label for="page-settings-card-column-count-xs">Teléfono</label></td>
+						<td class="page-settings-control-container"><select class="form-control js-page-settings-card-column-count" data-size="xs" id="page-settings-card-column-count-xs">
+							<option selected="selected" value="1">
+								1
+							</option>
+							<option value="2">
+								2
+							</option>
+							<option value="3">
+								3
+							</option>
+							<option value="4">
+								4
+							</option>
+							<option value="6">
+								6
+							</option>
+						</select></td>
+					</tr>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<a class="js-page-settings-cancel btn btn-default" data-dismiss="modal" href="#">Cancelar</a> <a class="js-page-settings-save btn btn-primary" href="#">Guardar cambios</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="well description">
+	<a class="close" href="#" onclick="$(this).closest('.well').hide(); return false;"><span aria-hidden="true">&times;</span></a>
+	<p>Here you can view the entire list of games, with their respective dates.</p>
+</div>
+<div class="grid grid-table js-grid">
+<div class="addition-block js-actions">
+	<div class="btn-toolbar addition-block-left pull-left">
+		<div class="btn-group">
+			<a class="btn btn-default pgui-add" routerLink="/games/create" title="Agregar">
+				<i class="icon-plus"></i> <span class="visible-lg-inline">Agregar</span></a>
+		</div>
+		<div class="btn-group">
+			<a class="btn btn-default" href="#" title="Actualizar">
+				<i class="icon-page-refresh"></i> <span class="visible-lg-inline">Actualizar</span></a>
+		</div>
+		<div class="btn-group export-button">
+			<div class="btn-group">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown"  href="#" title="Exportar">
+					<i class="icon-export"></i> <span class="visible-lg-inline">Exportar</span> <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#"><i class="icon-export-pdf"></i> Exportar a PDF</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon-export-excel"></i> Exportar a Excel</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon-export-word"></i> Exportar a Word</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon-export-xml"></i> Exportar a XML</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon-export-csv"></i> Exportar a CSV</a>
+					</li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" title="Imprimir">
+					<i class="icon-print-page"></i> <span class="visible-lg-inline">Imprimir</span> <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#"><i class="icon-print-page"></i> Imprimir página actual</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon-print-page"></i> Imprimir todas las páginas</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="btn-group js-selection-actions-container fade" style="display: none">
+			<div class="btn-group">
+				<button class="btn btn-info dropdown-toggle"><span class="hidden-xs"><span class="js-count">0</span> ítem(s) seleccionados</span> <span class="js-count visible-xs-inline">0</span> <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="js-action" href="#">Limpiar</a>
+					</li>
+					<li class="divider"></li>
+					<li class="dropdown dropdown-sub-menu">
+						<a href="#">Filtro de selección</a>
+						<ul class="dropdown-menu sub-menu">
+							<li>
+								<a class="js-action" href="#">Solo mostrar seleccionados</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a class="js-action" href="#">Solo mostrar no seleccionados</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a class="js-action" href="#">Mostrar todos</a>
+							</li>
+						</ul>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a class="js-action" href="#">Actualizar</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="addition-block-right pull-right">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default js-filter-builder-open" title="Editar filtro (Ctrl+Shift+F)"><i class="icon-filter-alt"></i></button>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-default" data-target="#multiple-sorting-v_data_editing_multi_editGrid_5d3c8f9d83df2" data-toggle="modal" id="multi-sort-v_data_editing_multi_editGrid_5d3c8f9d83df2" title="Ordenar"><i class="icon-sort"></i></button>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-default" data-target="#page-settings" data-toggle="modal" title="Ajustes de página"><i class="icon-settings"></i></button>
+		</div>
+	</div>
+	<div class="addition-block-right pull-right js-quick-filter">
+		<div class="quick-filter-toolbar btn-group">
+			<div class="input-group js-filter-control">
+				<input class="js-input form-control" name="quick_filter" placeholder="Búsqueda rápida" size="16" type="text" value="">
+				<div class="input-group-btn dropdown dropdown-lg">
+					<button aria-expanded="false" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="toggle-dropdown" type="button"><span class="caret"></span></button>
+					<div class="dropdown-menu dropdown-menu-right" role="menu">
+						<form class="form-horizontal quick-filter">
+							<div class="form-group form-group-sm">
+								<label class="control-label" for="quick-filter-fields">Columnas</label>
+								<div class="col-input input-group-sm" style="width:100%;max-width:100%">
+									<select class="form-control"  id="quick-filter-fields" multiple name="quick_filter_fields[]">
+										<option value="task_name">
+											Task Name
+										</option>
+										<option value="assignee">
+											Assignee
+										</option>
+										<option value="priority">
+											Priority
+										</option>
+										<option value="deadline">
+											Deadline
+										</option>
+										<option value="state">
+											State
+										</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="control-label" for="quick-filter-operator">Condiciones de busqueda</label>
+								<div class="col-input input-group-sm" style="width:100%;max-width:100%">
+									<select class="form-control" id="quick-filter-operator" name="quick_filter_operator">
+										<option selected value="Contains">
+											Contiene
+										</option>
+										<option value="BeginsWith">
+											Comienza con
+										</option>
+										<option value="EndsWith">
+											Termina con
+										</option>
+										<option value="Equals">
+											Igual a
+										</option>
+										<option value="DoesNotContain">
+											No contiene
+										</option>
+										<option value="DoesNotEqual">
+											No es igual a
+										</option>
+									</select>
+								</div>
+							</div>
+							<hr class="quick-filter-separator">
+							<span class="pull-right"><button class="js-cancel btn btn-sm btn-default" type="button"><span class="pull-right">Cancelar</span> <button class="js-submit btn btn-sm btn-primary" type="button">Aplicar</button></button></span>
+						</form>
+					</div><button class="btn btn-default js-submit" title="Buscar" type="button"><i class="icon-search"></i></button> <button class="btn btn-default js-reset" title="Limpiar" type="button"><i class="icon-filter-reset"></i></button>
+				</div>
+			</div>
+		</div><span class="hidden-xs">&thinsp;</span>
+	</div>
+</div>
+<div class="filter-status js-filter-status"></div>
+<div class="js-grid-message-container"></div>
+<table class="table text-center table-striped">
+	<thead class="js-column-filter-container">
+			<tr>
+				<th class="row-selection" rowspan="1" style="width:1%;"><input type="checkbox"></th>
+				<th rowspan="1" style="width:1%;">Acciones</th>
+				<th class=" sortable" colspan="1" rowspan="1">
+					<span>Game Name</span>
+				</th>
+				<th class="sortable filterable" colspan="1" rowspan="1">
+					<span>Assignee</span> <a class="column-filter-trigger js-filter-trigger" href="#" title="">
+						<i class="icon-filter"></i></a>
+				</th>
+				<th class=" sortable filterable" colspan="1" rowspan="1">
+					<span>Priority</span>
+					<a class="column-filter-trigger js-filter-trigger" href="#" title="">
+						<i class="icon-filter"></i>
+					</a>
+				</th>
+				<th class=" sortable filterable" colspan="1" rowspan="1">
+					<span>Deadline</span>
+					<a class="column-filter-trigger js-filter-trigger" href="#" title="">
+						<i class="icon-filter"></i>
+					</a>
+				</th>
+				<th class=" sortable filterable" colspan="1" rowspan="1">
+					<span>State</span>
+					<a class="column-filter-trigger js-filter-trigger" href="#" title=""><i class="icon-filter"></i></a>
+				</th>
+			</tr>
+		</thead>
+		<tbody class="pg-row-list">
+			<tr class="pg-row" style="" *ngFor="let game of games | async">
+				<td style="">
+					<div class="row-selection">
+						<input id="record__1" name="rec0" type="checkbox">
+					</div>
+				</td>
+				<td class="operation-column">
+					<span class="operation-item">
+							<a class="link-icon" routerLink="/games/detail/{{game.id}}" title="Ver">
+								<i class="icon-view"></i>
+							</a>
+					</span>
+					<span class="operation-item">
+							<a class="link-icon" routerLink="/games/edit/{{game.id}}" title="Editar">
+								<i class="icon-edit"></i>
+							</a>
+					</span>
+					<span class="operation-item">
+							<a class="link-icon" (click)="delete(game.id)" title="Eliminar">
+								<i class="icon-remove"></i>
+							</a>
+					</span>
+			  </td>
+				<td class=" pgui-cell-edit">{{ game.gameName }}</td>
+				<td class=" pgui-cell-edit">{{ game.Assignee}}</td>
+				<td class=" pgui-cell-edit">{{ game.Priority }}</td>
+				<td class=" pgui-cell-edit">{{ game.Deadline}}</td>
+				<td class=" pgui-cell-edit">{{ game.State }}</td>
+			</tr>
+		</tbody>
+	<tfoot></tfoot>
+</table>
+</div>

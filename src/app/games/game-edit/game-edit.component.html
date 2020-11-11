@@ -1,0 +1,299 @@
+<form action="" class="form-horizontal" #frmGame="ngForm" id="frmGame" novalidate (ngSubmit)="onSaveGame()" novalidate>
+	<div class="col-md-12" *ngIf="game">
+		<div class="sidebar-outer">
+			<div class="container-padding">
+				<div class="page-header form-header">
+					<ol class="breadcrumb pgui-breadcrumb">
+						<li>
+							<a href=""><i class="icon-home"></i></a>
+						</li>
+						<li class="dropdown">
+							<a href="">Data Input Forms</a>
+						</li>
+						<li class="dropdown">
+							<a href="">Data Input Forms.Multi Edit</a> <button class="btn btn-xs btn-default dropdown-toggle pgui-breadcrumb-siblings" data-toggle="dropdown"><span class="caret"></span></button>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li>
+									<a href="">Separate Page</a>
+								</li>
+								<li>
+									<a href="">Modal Window</a>
+								</li>
+								<li>
+									<a href="">Inline Editing</a>
+								</li>
+								<li>
+									<a href="">Custom Separate Page</a>
+								</li>
+								<li>
+									<a href="">Custom Modal Dialog</a>
+								</li>
+								<li>
+									<a href="">Custom Inline Form</a>
+								</li>
+								<li>
+									<a href="">Wizard Form</a>
+								</li>
+								<li>
+									<a href="">Adding multiple records</a>
+								</li>
+								<li>
+									<a href="">Form Layouts</a>
+								</li>
+								<li>
+									<a href="">Editors Overview</a>
+								</li>
+								<li>
+									<a href="">Validation</a>
+								</li>
+								<li>
+									<a href="">Client-side API</a>
+								</li>
+								<li>
+									<a href="">Dependent Lookups</a>
+								</li>
+								<li>
+									<a href="">On-the-Fly Adding</a>
+								</li>
+								<li>
+									<a href="">Quick Edit</a>
+								</li>
+								<li>
+									<a href="">Custom Default Values</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">Editar</li>
+					</ol>
+					<h1>Editar</h1>
+				</div>
+				<div class="col-md-12 js-form-container" data-form-url="">
+					<div class="form-actions form-actions-top row">
+						<div class="col-lg-8">
+							<div class="row">
+								<div class="col-sm-9 col-sm-offset-3">
+									<div class="btn-toolbar">
+										<div class="btn-group">
+											<button class="btn btn-primary js-save js-primary-save" type="submit">Guardar</button>
+											<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret">
+											</span></button>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="js-save" data-action="open" data-url="" href="#">Guardar y volver a la lista</a>
+												</li>
+												<li>
+													<a class="js-save js-multiple-insert-hide" data-action="edit" href="#">Guardar y continuar editando</a>
+												</li>
+												<li>
+													<a class="js-save js-save-insert" data-action="open" data-url="" href="#" title="(Ctrl+Shift+Return)">Guardar y agregar otro registro</a>
+												</li>
+											</ul>
+										</div>
+										<div class="btn-group">
+											<a class="btn btn-default" routerLink="/games" >Cancelar</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="js-form-collection col-lg-8">
+								<div class="clearfix"></div>
+								<div class="row">
+									<fieldset class="col-md-12">
+										<div class="row">
+											<div class="form-group col-sm-3 form-group-label">
+												<label class="control-label" data-column="task_name" for="Form5d41b6bb758cd_task_name_edit">Game Name <span class="required-mark">*</span></label>
+												<div class="pgui-field-options btn-group btn-group-xs btn-group-justified" data-toggle="buttons">
+													<label class="control-label" data-column="task_name" for="Form5d41b6bb758cd_task_name_edit"></label>
+												</div>
+											</div>
+											<div class="form-group col-sm-9">
+												<div class="col-input" data-column="task_name" style="width:100%;max-width:100%">
+													<input class="form-control valid" [(ngModel)] ="game.gameName"  data-editor="text" data-field-name="task_name" data-legacy-field-name="task_name" data-pgui-legacy-validate="true" data-required-error-message="Task Name es obligatorio." data-validation="required" id="Form5d41b6bb758cd_task_name_edit" maxlength="50" name="task_name_edit" type="text" value="">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-sm-3 form-group-label">
+												<label class="control-label" data-column="assignee" for="Form5d41b6bb758cd_assignee_edit">Assignee <span class="required-mark">*</span></label>
+												<div class="pgui-field-options btn-group btn-group-xs btn-group-justified" data-toggle="buttons">
+													<label class="control-label" data-column="assignee" for="Form5d41b6bb758cd_assignee_edit"></label>
+												</div>
+											</div>
+											<div class="form-group col-sm-9">
+												<div class="col-input" data-column="assignee" style="width:100%;max-width:100%">
+													<div class="input-group" style="width: 100%">
+														<ng-select
+															[items]="listUpdateAssigne"
+															[multiple]="false"
+															[closeOnSelect]="true"
+															bindLabel="value"
+															placeholder="Assignee Selected"
+															[(ngModel)]="selectedUpdateAssigne"
+															[ngModelOptions]="{standalone: true}">
+													</ng-select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-sm-3 form-group-label">
+												<label class="control-label" data-column="priority" for="Form5d41b6bb758cd_priority_edit">Priority <span class="required-mark">*</span></label>
+												<div class="pgui-field-options btn-group btn-group-xs btn-group-justified" data-toggle="buttons">
+													<label class="control-label" data-column="priority" for="Form5d41b6bb758cd_priority_edit"></label>
+												</div>
+											</div>
+											<div class="form-group col-sm-9">
+												<div class="col-input" data-column="priority" style="width:100%;max-width:100%">
+													<select class="form-control" [(ngModel)]="game.Priority" data-editor="combobox"  data-field-name="priority" data-legacy-field-name="priority" data-pgui-legacy-validate="true" data-required-error-message="Priority es obligatorio." data-validation="required" id="Form5d41b6bb758cd_priority_edit" name="priority_edit">
+														<option value="">
+															Por favor seleccione...
+														</option>
+														<option selected value="Normal">
+															Normal
+														</option>
+														<option value="Media">
+															Media
+														</option>
+														<option value="Alta">
+															Alta
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-sm-3 form-group-label">
+												<label class="control-label" data-column="deadline" for="Form5d41b6bb758cd_deadline_edit">Deadline <span class="required-mark" style="display: none">*</span></label>
+												<div class="pgui-field-options btn-group btn-group-xs btn-group-justified" data-toggle="buttons">
+													<label class="control-label" data-column="deadline" for="Form5d41b6bb758cd_deadline_edit"></label>
+												</div>
+											</div>
+											<div class="form-group col-sm-9">
+												<div class="col-input" data-column="deadline" style="width:100%;max-width:100%">
+													<div class="input-group pgui-date-time-edit js-datetime-editor-wrap">
+														<input class="form-control"
+														[owlDateTime]="fecha"
+														[owlDateTimeTrigger]="fecha"
+														[(ngModel)]="game.Deadline"
+														name="deadline"
+														readonly
+														type="text">
+														<owl-date-time
+														#fecha></owl-date-time>
+														<span class="input-group-addon" style="cursor: pointer">
+															<span class="icon-datetime-picker" [owlDateTimeTrigger]="fecha"></span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-sm-3 form-group-label">
+												<label class="control-label" data-column="state" for="Form5d41b6bb758cd_state_edit">State <span class="required-mark">*</span></label>
+												<div class="pgui-field-options btn-group btn-group-xs btn-group-justified" data-toggle="buttons">
+													<label class="control-label" data-column="state" for="Form5d41b6bb758cd_state_edit"></label>
+												</div>
+											</div>
+											<div class="form-group col-sm-9">
+												<div class="col-input" data-column="state" style="width:100%;max-width:100%">
+													<select class="form-control" [(ngModel)]="game.State" data-editor="combobox" data-field-name="state" data-legacy-field-name="state" data-pgui-legacy-validate="true" data-required-error-message="State es obligatorio." data-validation="required" id="Form5d41b6bb758cd_state_edit" name="state_edit">
+														<option value="">
+															Por favor seleccione...
+														</option>
+														<option value="Pending">
+															Pending
+														</option>
+														<option value="Completed">
+															Completed
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="row">
+									<div class="col-sm-9 col-sm-offset-3">
+										<span class="required-mark">*</span> - Campo requerido
+									</div>
+								</div><input name="pk0" type="hidden" value="1"> <input name="flash_messages" type="hidden" value="1">
+								<div class="row">
+									<div class="col-md-12 form-error-container form-error-container-bottom"></div>
+								</div>
+						</div>
+					</div>
+					<div class="form-actions row">
+						<div class="col-lg-8">
+							<div class="row">
+								<div class="col-sm-9 col-sm-offset-3">
+									<div class="btn-toolbar">
+										<div class="btn-group">
+											<button class="btn btn-primary js-save js-primary-save" data-action="open" data-url="" title="(Ctrl+Return)" type="submit">Guardar</button> <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="js-save" data-action="open" data-url="" href="#">Guardar y volver a la lista</a>
+												</li>
+												<li>
+													<a class="js-save js-multiple-insert-hide" data-action="edit" href="#">Guardar y continuar editando</a>
+												</li>
+												<li>
+													<a class="js-save js-save-insert" data-action="open" data-url="" href="#" title="(Ctrl+Shift+Return)">Guardar y agregar otro registro</a>
+												</li>
+											</ul>
+										</div>
+										<div class="btn-group">
+											<a class="btn btn-default" routerLink="/games">Cancelar</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="demo-about" tabindex="-1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+								<h4 class="modal-title">About this demo</h4>
+							</div>
+							<div class="modal-body">
+								<p>This demo application contains 100+ pages and illustrates most of features provided by PHP Generator. Hope it will help you to create even more powerful websites for your users.</p>
+								<p>You can <a href="#" target="_blank">download the demo project</a> from our website and run the demo on your webserver as described in readme.txt.</p>
+							</div>
+							<div class="modal-footer">
+								<a class="btn btn-primary" href="#" target="_blank">Download PHP Generator Free Trial</a> <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<footer>
+					<table class="table table-condensed legend">
+						<caption>
+							Legend
+						</caption>
+						<tbody>
+							<tr>
+								<td><span class="label label-success">New</span></td>
+								<td>Recently added or significantly updated pages.</td>
+							</tr>
+							<tr>
+								<td><span class="label label-warning">Pro</span></td>
+								<td>Pages illustrating features available only in the Professional edition of PHP Generator.</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>© <span class="copyright">2002-
+					<script type="text/javascript">
+					document.write(new Date().getFullYear().toString())
+					</script>2019</span> <a href="#" target="_blank">SQL Maestro Group</a>. Follow us: <a class="link-icon" href="#" target="_blank"><i class="icon-facebook-square"></i></a> <a class="link-icon" href="#" target="_blank"><i class="icon-twitter"></i></a> <a class="link-icon" href="#" target="_blank"><i class="icon-youtube"></i></a></p>
+					<p>Created with <a href="#" target="_blank">PHP Generator for MySQL</a>. Want to learn more? <a href="#" target="_blank">Download the demo project!</a></p>
+				</footer>
+			</div>
+		</div>
+	</div>
+</form>

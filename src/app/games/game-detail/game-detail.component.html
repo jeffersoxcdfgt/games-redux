@@ -1,0 +1,256 @@
+<div class=" col-md-12">
+				<div class="sidebar-outer">
+					<div class="container-padding">
+						<div id="pgui-view-grid">
+							<div class="page-header">
+								<ol class="breadcrumb pgui-breadcrumb">
+									<li>
+										<a href="#"><i class="icon-home"></i></a>
+									</li>
+									<li class="dropdown">
+										<a href="#">Data Input Forms</a>
+									</li>
+									<li class="dropdown">
+										<a href="#">Data Input Forms.Multi Edit</a> <button class="btn btn-xs btn-default dropdown-toggle pgui-breadcrumb-siblings" data-toggle="dropdown"><span class="caret"></span></button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li>
+												<a href="#">Separate Page</a>
+											</li>
+											<li>
+												<a href="#">Modal Window</a>
+											</li>
+											<li>
+												<a href="#">Inline Editing</a>
+											</li>
+											<li>
+												<a href="#">Custom Separate Page</a>
+											</li>
+											<li>
+												<a href="#">Custom Modal Dialog</a>
+											</li>
+											<li>
+												<a href="#">Custom Inline Form</a>
+											</li>
+											<li>
+												<a href="#">Wizard Form</a>
+											</li>
+											<li>
+												<a href="#">Adding multiple records</a>
+											</li>
+											<li>
+												<a href="#">Form Layouts</a>
+											</li>
+											<li>
+												<a href="#">Editors Overview</a>
+											</li>
+											<li>
+												<a href="#">Validation</a>
+											</li>
+											<li>
+												<a href="#">Client-side API</a>
+											</li>
+											<li>
+												<a href="#">Dependent Lookups</a>
+											</li>
+											<li>
+												<a href="#">On-the-Fly Adding</a>
+											</li>
+											<li>
+												<a href="#">Quick Edit</a>
+											</li>
+											<li>
+												<a href="#">Custom Default Values</a>
+											</li>
+										</ul>
+									</li>
+									<li class="dropdown">Ver</li>
+								</ol>
+								<h1>Ver</h1>
+							</div>
+							<div class="form-horizontal">
+								<div class="form-actions form-actions-top row">
+									<div class="col-lg-8">
+										<div class="row">
+											<div class="col-sm-9 col-sm-offset-3">
+												<div class="btn-toolbar">
+													<div class="btn-group">
+														<a class="btn btn-primary" routerLink="/games" title="Regresar"><i class="icon-arrow-left"></i> <span class="hidden-sm hidden-xs">Regresar</span></a>
+													</div>
+													<div class="btn-group">
+														<a class="btn btn-default" href="#" title="Editar"><i class="icon-edit"></i> <span class="hidden-sm hidden-xs">Editar</span></a>
+													</div>
+													<div class="btn-group">
+														<div class="btn-group">
+															<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" title="Exportar"><i class="icon-export"></i> <span class="hidden-sm hidden-xs">Exportar</span> <span class="caret"></span></a>
+															<ul class="dropdown-menu">
+																<li>
+																	<a href="#"><i class="icon-export-pdf"></i> Exportar a PDF</a>
+																</li>
+																<li>
+																	<a href="#"><i class="icon-export-excel"></i> Exportar a Excel</a>
+																</li>
+																<li>
+																	<a href="#"><i class="icon-export-word"></i> Exportar a Word</a>
+																</li>
+																<li>
+																	<a href="#"><i class="icon-export-xml"></i> Exportar a XML</a>
+																</li>
+																<li>
+																	<a href="#"><i class="icon-export-csv"></i> Exportar a CSV</a>
+																</li>
+															</ul>
+														</div>
+														<div class="btn-group">
+															<a class="btn btn-default" href="#" title="Imprimir"><i class="icon-print-page"></i> <span class="hidden-sm hidden-xs">Imprimir</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 js-message-container"></div>
+									<div class="clearfix"></div>
+									<div class="form-static form-horizontal col-lg-8">
+										<div class="row">
+											<div class="col-md-12" *ngIf="game | async ; let game;">
+												<div class="row">
+													<div class="form-group col-sm-3 form-group-label">
+														<label class="control-label" data-column="task_name">Task Name</label>
+													</div>
+													<div class="form-group col-sm-9">
+														<div class="form-control-static pgui-cell-edit" data-column-name="task_name" data-edit-url="">
+														{{ game.gameName }}
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-group col-sm-3 form-group-label">
+														<label class="control-label" data-column="assignee">Assignee</label>
+													</div>
+													<div class="form-group col-sm-9">
+														<div class="form-control-static pgui-cell-edit" data-column-name="assignee" data-edit-url="">
+																{{ game.Assignee }}
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-group col-sm-3 form-group-label">
+														<label class="control-label" data-column="priority">Priority</label>
+													</div>
+													<div class="form-group col-sm-9">
+														<div class="form-control-static pgui-cell-edit" data-column-name="priority" data-edit-url="">
+																{{ game.Priority }}
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-group col-sm-3 form-group-label">
+														<label class="control-label" data-column="deadline">Deadline</label>
+													</div>
+													<div class="form-group col-sm-9">
+														<div class="form-control-static pgui-cell-edit" data-column-name="deadline" data-edit-url="">
+															{{ game.Deadline }}
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="form-group col-sm-3 form-group-label">
+														<label class="control-label" data-column="state">State</label>
+													</div>
+													<div class="form-group col-sm-9">
+														<div class="form-control-static pgui-cell-edit" data-column-name="state" data-edit-url="">
+															{{ game.State }}
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-actions row">
+									<div class="col-lg-8">
+										<div class="row">
+											<div class="col-sm-9 col-sm-offset-3">
+												<div class="btn-toolbar">
+													<div class="btn-group">
+														<a class="btn btn-primary" routerLink="/games" title="Regresar"><i class="icon-arrow-left"></i> <span class="hidden-sm hidden-xs">Regresar</span></a>
+													</div>
+													<div class="btn-group">
+														<a class="btn btn-default" href="#" title="Editar"><i class="icon-edit"></i> <span class="hidden-sm hidden-xs">Editar</span></a>
+													</div>
+													<div class="btn-group">
+														<div class="btn-group">
+															<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" title="Exportar"><i class="icon-export"></i> <span class="hidden-sm hidden-xs">Exportar</span> <span class="caret"></span></a>
+															<ul class="dropdown-menu">
+																<li>
+																	<a href="#"><i class="icon-export-pdf"></i> Exportar a PDF</a>
+																</li>
+																<li>
+																	<a href="#"><i class="icon-export-excel"></i> Exportar a Excel</a>
+																</li>
+																<li>
+																	<a href="#"><i class="icon-export-word"></i> Exportar a Word</a>
+																</li>
+																<li>
+																	<a href="#"><i class="icon-export-xml"></i> Exportar a XML</a>
+																</li>
+																<li>
+																	<a href="#"><i class="icon-export-csv"></i> Exportar a CSV</a>
+																</li>
+															</ul>
+														</div>
+														<div class="btn-group">
+															<a class="btn btn-default" href="#" title="Imprimir"><i class="icon-print-page"></i> <span class="hidden-sm hidden-xs">Imprimir</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal fade" id="demo-about" tabindex="-1">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+										<h4 class="modal-title">About this demo</h4>
+									</div>
+									<div class="modal-body">
+										<p>This demo application contains 100+ pages and illustrates most of features provided by PHP Generator. Hope it will help you to create even more powerful websites for your users.</p>
+										<p>You can <a href="#" target="_blank">download the demo project</a> from our website and run the demo on your webserver as described in readme.txt.</p>
+									</div>
+									<div class="modal-footer">
+										<a class="btn btn-primary" href="#" target="_blank">Download PHP Generator Free Trial</a> <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<footer>
+							<table class="table table-condensed legend">
+								<caption>
+									Legend
+								</caption>
+								<tbody><tr>
+									<td><span class="label label-success">New</span></td>
+									<td>Recently added or significantly updated pages.</td>
+								</tr>
+								<tr>
+									<td><span class="label label-warning">Pro</span></td>
+									<td>Pages illustrating features available only in the Professional edition of PHP Generator.</td>
+								</tr>
+							</tbody></table>
+							<p>© <span class="copyright">2002-
+							<script type="text/javascript">
+							document.write(new Date().getFullYear().toString())
+							</script>2019</span> <a href="#" target="_blank">SQL Maestro Group</a>. Follow us: <a class="link-icon" href="#" target="_blank"><i class="icon-facebook-square"></i></a> <a class="link-icon" href="#" target="_blank"><i class="icon-twitter"></i></a>
+							<a class="link-icon" href="#" target="_blank"><i class="icon-youtube"></i></a></p>
+							<p>Created with <a href="#" target="_blank">PHP Generator for MySQL</a>. Want to learn more? <a href="#" target="_blank">Download the demo project!</a></p>
+						</footer>
+					</div>
+				</div>
+			</div>
